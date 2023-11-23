@@ -31,3 +31,9 @@ class GetTopScorerLoadingState extends AppState {}
 class GetTopScorerSuccessState extends AppState {}
 
 class GetTopScorerErrorState extends AppState {}
+
+class GetPlayerDetailsLoadingState extends AppState {}
+
+class GetPlayerDetailsSuccessState extends AppState {}
+
+class GetPlayerDetailsErrorState extends AppState {}

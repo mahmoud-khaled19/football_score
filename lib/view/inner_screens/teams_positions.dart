@@ -109,8 +109,8 @@ class TeamsPosition extends StatelessWidget {
                                 ),
                               ),
                               onTap: () {
-                                cubit.getTeamDetails(
-                                    context: context, teamId: data.teamId!);
+                                // cubit.getTeamDetails(
+                                //     context: context, teamId: data.teamId!);
                               },
                             ),
                             SizedBox(

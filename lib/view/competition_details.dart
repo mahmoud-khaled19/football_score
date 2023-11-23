@@ -42,7 +42,7 @@ class _CompetitionDetailsState extends State<CompetitionDetails>
                 indicatorColor: Theme.of(context).primaryColor,
                 controller: controller,
                 tabs: const [
-                  Text('Order'),
+                  Text('Positions'),
                   Text('TOP SCORER'),
                 ],
               ),

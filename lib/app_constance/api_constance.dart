@@ -25,9 +25,9 @@ class ApiConstance {
     return '$basicUrl=get_leagues&league_id=$id&$basicApi';
   }
 
-  static String getPlayer({String? name}) {
-    String playerName = name != null ? '&player_name=$name' : '';
+  static String getPlayer({String? id}) {
+    String playerId = id != null ? '&player_id=$id' : '';
 
-    return '$basicUrl=get_players&player_name=$playerName&$basicApi';
+    return '$basicUrl=get_players&player_id=$playerId&$basicApi';
   }
 }

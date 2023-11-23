@@ -1,17 +1,18 @@
-class PlayerModel {
-  final List<Player> player;
+class TopScorerModel {
+  final List<TopScorer> player;
 
-  PlayerModel({required this.player});
+  TopScorerModel({required this.player});
 
-  factory PlayerModel.fromJson(List<dynamic> json) {
-    List<Player> player = json.map((data) => Player.fromJson(data)).toList();
-    return PlayerModel(player: player);
+  factory TopScorerModel.fromJson(List<dynamic> json) {
+    List<TopScorer> player = json.map((data) => TopScorer.fromJson(data)).toList();
+    return TopScorerModel(player: player);
   }
 }
 
-class Player {
+class TopScorer {
   String? playerPlace;
   String? playerName;
+  String? playerImage;
   int? playerKey;
   String? teamName;
   String? teamKey;
@@ -19,7 +20,7 @@ class Player {
   String? assists;
   String? penaltyGoals;
 
-  Player.fromJson(Map<String, dynamic> json) {
+  TopScorer.fromJson(Map<String, dynamic> json) {
     playerPlace = json['player_place'];
     playerName = json['player_name'];
     playerKey = json['player_key'];
@@ -28,5 +29,6 @@ class Player {
     goals = json['goals'];
     assists = json['assists'];
     penaltyGoals = json['penalty_goals'];
+    playerImage=json['player_image'];
   }
 }

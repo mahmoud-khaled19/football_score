@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:football_app/app_constance/constants_methods.dart';
-import 'package:football_app/view/inner_screens/competition_details.dart';
+import 'package:football_app/view/competition_details.dart';
 import 'package:football_app/view_model/app_state.dart';
-import '../../app_constance/values_manager.dart';
-import '../../view_model/app_cubit.dart';
-import '../components/competition_shape.dart';
-import 'empty_screen.dart';
+import '../app_constance/values_manager.dart';
+import '../view_model/app_cubit.dart';
+import 'components/competition_shape.dart';
 
 class CompetitionsScreen extends StatelessWidget {
   const CompetitionsScreen(
@@ -73,7 +72,9 @@ class CompetitionsScreen extends StatelessWidget {
               );
 
             case false:
-              return const EmptyScreen();
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
           }
         },
       ),
